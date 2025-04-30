@@ -1,35 +1,29 @@
-// fetch('https://www.dnd5eapi.co/api/monsters')
-//     .then(res => res.json())
-//     .then(data => {
-//     data.results.forEach(monster => {
-//         fetch('https://www.dnd5eapi.co' + monster.url)
-//         .then(res => res.json())
-//         .then(monstre=> console.log(monstre));
-//     });
-//     })
-//     .catch(err => console.error("Erreur :", err));
+//Création d'un élément HTML pour afficher les infos
 
+const card = document.getElementById("heros-feed");
 
+function fetchMonster(){
 fetch('https://www.dnd5eapi.co/api/monsters')
     .then(res => res.json())
     .then(data => {
-    data.results.forEach(monster => {
+        const shuffled = data.results.sort(()=>0.5 - Math.random());
+        const selected = shuffled.slice(0,10);
+    selected.forEach(monster => {
         fetch('https://www.dnd5eapi.co' + monster.url)
         .then(res => res.json())
         .then(monstre=> afficherMonstre(monstre));
     });
     })
     .catch(err => console.error("Erreur :", err));
-
+}
 
 function afficherMonstre(monstre){
-//Création d'un élément HTML pour afficher les infos
-    const hero = document.createElement('div');
+    const container = document.createElement('div');
 //Selection d'un élément du DOM par l'ID
-    const card = document.getElementById("heros-feed");
-    hero.classList.add("monstre-card");
 
-hero.innerHTML = `
+    container.classList.add("monstre-card");
+
+container.innerHTML = `
     <h2>${monstre.name}</h2>
     <p>Type: ${monstre.type}</p>
     <p>Taille: ${monstre.size}</p>
@@ -61,6 +55,15 @@ hero.innerHTML = `
 
 
 
-    card.appendChild(hero)
+    card.appendChild(container)
 }
 
+fetchMonster();
+
+
+//bouton reroll page feed
+const bouton = document.getElementById("bouton-reroll");
+bouton.addEventListener('click', function() {
+    card.innerHTML =``;
+    fetchMonster();
+})
