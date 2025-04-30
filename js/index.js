@@ -67,3 +67,37 @@ bouton.addEventListener('click', function() {
     card.innerHTML =``;
     fetchMonster();
 })
+
+// DropDown Menu
+
+const dropdownMenu = document.getElementById("dropdown-menu");
+dropdownMenu.addEventListener('click', displayDropdownMenu)
+
+menuContent = {
+    'Accueil' : 'index.html',
+    'Galerie' : 'galerie.html',
+    'Jeux' : 'jeux.html'
+}
+
+isMenuDisplay = false;
+
+function displayDropdownMenu(){
+if(!isMenuDisplay){
+    const dropdownDisplay = document.createElement('div')
+    dropdownMenu.appendChild(dropdownDisplay);
+    dropdownDisplay.classList.add('dropdown-menu-display');
+    for(element in menuContent){
+        const menuChoice = document.createElement('div');
+        menuChoice.innerHTML = `<a href="${menuContent[element]}">${element}</a>`;
+        
+        
+        dropdownDisplay.appendChild(menuChoice);
+    }
+    isMenuDisplay = true;
+} else {
+    const dropdownDisplay = document.querySelector('.dropdown-menu-display');
+    dropdownDisplay.remove();
+    isMenuDisplay=false;
+}
+};
+

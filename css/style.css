@@ -15,10 +15,7 @@ body{
     background-color: 	#1C1C1C;
     font-family: "Merriweather", serif;
 }
-.container{
-    max-width:;
-    
-}
+
 
 main {
     background-color: 	#1C1C1C;
@@ -31,7 +28,7 @@ main {
 
 .monstre-card{
     
-    width: 33%;
+    width: 50%;
     border : 3px solid 	#8B0000;
     padding: 10px;
     margin: 10px;
@@ -86,3 +83,24 @@ h1{
     color: #1C1C1C;
 }
 
+/* MENU DISPLAY  */
+
+.dropdown-menu-display{
+    display: flex;
+    flex-direction: column;
+    
+}
+.dropdown-menu-display>div{
+    padding: 1rem;
+}
+
+
+.dropdown-menu-display a{
+    color: #F5F5DC;
+    text-decoration: none;
+    border: 1px solid #1C1C1C;
+    padding: 0.5rem;
+    margin: 1rem;
+    font-size: larger;
+    background-color: 	#A9A9A9;
+}
