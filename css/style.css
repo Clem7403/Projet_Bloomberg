@@ -16,7 +16,7 @@ body{
     font-family: "Merriweather", serif;
 }
 .container{
-    max-width:1600px;
+    max-width:;
     
 }
 
@@ -32,7 +32,7 @@ main {
 .monstre-card{
     
     width: 33%;
-    border : 2px solid 	#8B0000;
+    border : 3px solid 	#8B0000;
     padding: 10px;
     margin: 10px;
     border-radius: 8px;
@@ -67,3 +67,22 @@ h1{
     height: auto;
     border-radius: 8px;
 }
+
+/* Bouton page feed */
+
+#bouton-reroll{
+    padding: 10px 20px;
+    background-color: #8B0000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Cinzel', serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#bouton-reroll:hover {
+    background-color: #D4AF37;
+    color: #1C1C1C;
+}
+
