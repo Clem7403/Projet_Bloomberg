@@ -88,12 +88,18 @@ h1{
 .dropdown-menu-display{
     display: flex;
     flex-direction: column;
-    
+    position: absolute;
+    background-color: #8B0000;
+    border: 1px solid #1C1C1C;
 }
 .dropdown-menu-display>div{
     padding: 1rem;
 }
 
+#dropdown-menu-img{
+    width :60px;
+    height: auto;
+}
 
 .dropdown-menu-display a{
     color: #F5F5DC;
@@ -104,3 +110,68 @@ h1{
     font-size: larger;
     background-color: 	#A9A9A9;
 }
+
+/* FORMULAIRE */
+
+#menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+#formulaire-img{
+    width : 60px;
+    height: auto;
+}
+
+.drop-form-display {
+    position: absolute;
+    background-color: #F5F5DC;
+    color:#1C1C1C;
+    border: 3px solid #8B0000;
+    border-radius: 8px;
+    padding: 1em;
+}
+
+.drop-form-display>input{
+    margin: 0.3em;
+}
+
+.addForm{
+    
+    width: 50%;
+    border : 3px solid 	#8B0000;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: #F5F5DC;
+    color: 	#1C1C1C;
+    
+
+}
+
+h1{
+    font-family: "cinzel decorative", serif;
+}
+
+.addForm h2{
+    color : #D4AF37;
+    font-family: "cinzel decorative", serif;
+}
+
+.addForm table {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.addForm tr th {
+    border: 1px solid black;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.addForm img{
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
