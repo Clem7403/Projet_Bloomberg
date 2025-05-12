@@ -194,6 +194,8 @@ function displayForm(){
         const charisma = formData.get("charisma");
         const wisdom = formData.get("wisdom");
 
+        
+        
         result.innerHTML = `
             <h2>${name}</h2>
             <p>Type: ${type}</p>
@@ -222,6 +224,9 @@ function displayForm(){
                 </tbody>
             </table>
         `;
+        const dropFormDisplay = document.querySelector(".drop-form-display");
+        dropFormDisplay.remove();
+        isFormDisplay = false;
     })}else{
         const dropFormDisplay = document.querySelector(".drop-form-display");
         dropFormDisplay.remove();
