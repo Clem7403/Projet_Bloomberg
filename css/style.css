@@ -175,3 +175,32 @@ h1{
     border-radius: 8px;
 }
 
+/* ****************** GALERIE ********************** */
+
+#galerie{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.mosaique{
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.colonne{
+    flex-direction: column;
+}
+.cardImages{
+    width: 20%;
+    height: auto;
+}
+.pic{
+    width: 20%;
+    height: auto;
+}
+.pic img {
+    width: 100%;
+    height: auto;
+    
+}
