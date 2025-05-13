@@ -4,16 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galerie</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <nav>
-            <div id="dropdown-menu">R</div>
+            <div id="dropdown-menu"> <img id="dropdown-menu-img" src="image/menu_deroulant.jpg" alt="icone menu deroulant"> </div>
         </nav>
     </header>
-    <main></main>
+    <main>
+        <div class="container">
+            <div class="bouton">
+                <button id="mosaique">mosaïque</button>
+                <button id="colonne">colonne</button>
+                <button id="addPic">Ajout d'une image</button>
+                <button id="deletePic">Suppression de l'image</button>
+            </div>
+            <div id="galerie">
+
+            </div>
+        </div>
+    </main>
     <footer></footer>
-    <script src="js/index.js"></script>
+    <script src="js/galerie.js"></script>
 </body>
 </html>

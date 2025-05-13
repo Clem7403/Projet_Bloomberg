@@ -186,7 +186,7 @@ function displayForm(){
         const name = formData.get("name");
         const type = formData.get("type");
         const taille = formData.get("taille");
-        const image = formData.get("image");
+        const image = formData.get("image");    
         const strength = formData.get("strength");
         const constitution = formData.get("constitution");
         const hit_points = formData.get("hit_points");
@@ -195,12 +195,11 @@ function displayForm(){
         const wisdom = formData.get("wisdom");
 
         
-        
         result.innerHTML = `
             <h2>${name}</h2>
             <p>Type: ${type}</p>
             <p>Taille: ${taille}</p>
-            <div id="img-container"><img src="${image}"/><div>
+            <div id="img-container"><img src="${image}" alt="" /><div>
             <table>
                 <thead>
                     <tr>
@@ -224,6 +223,8 @@ function displayForm(){
                 </tbody>
             </table>
         `;
+
+        
         const dropFormDisplay = document.querySelector(".drop-form-display");
         dropFormDisplay.remove();
         isFormDisplay = false;
